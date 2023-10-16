@@ -31,9 +31,9 @@ namespace P04WeatherForecastAPI.Client
 
         private async void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            Forecast day1Forecast = await accuWeatherService.GetForecast('', "1");
-            lbl1DayForecastRealFeelTempValue.Content = Convert.ToString(day1Forecast.DailyForecasts.RealFeelTemperature.Maximum.Value);
-            // City[] cities= await accuWeatherService.GetLocations(txtCity.Text);
+           // Forecast day1Forecast = await accuWeatherService.GetForecast('', "1");
+           // lbl1DayForecastRealFeelTempValue.Content = Convert.ToString(day1Forecast.DailyForecasts.RealFeelTemperature.Maximum.Value);
+            City[] cities= await accuWeatherService.GetLocations(txtCity.Text);
 
             // // standardowy sposób dodawania elementów
             // //lbData.Items.Clear();
@@ -41,7 +41,7 @@ namespace P04WeatherForecastAPI.Client
             // //    lbData.Items.Add(c.LocalizedName);
 
             // // teraz musimy skorzystac z bindowania danych bo chcemy w naszej kontrolce przechowywac takze id miasta 
-            // lbData.ItemsSource = cities;
+            lbData.ItemsSource = cities;
         }
 
         private async void lbData_SelectionChanged(object sender, SelectionChangedEventArgs e)
