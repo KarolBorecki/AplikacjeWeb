@@ -20,7 +20,7 @@ namespace P04WeatherForecastAPI.Client.Services
 
         // TODO: NEW ENDPOINTS 
         private const string city_neigh_by_locationkey_endpoint = "locations/v1/cities/neighbors/{0}?apikey={1}&language{2}";
-        private const string day_of_daily_forecast_endpoint = "forecasts/v1/daily/1day/{0}?apikey={1}&language{2}";
+        private const string day_of_daily_forecast_endpoint = "forecasts/v1/daily/{0}day/{1}?apikey={2}&language{3}";
 
         // private const string api_key = "5hFl75dja3ZuKSLpXFxUzSc9vXdtnwG5";
         string api_key;
@@ -84,15 +84,13 @@ namespace P04WeatherForecastAPI.Client.Services
 
         public async Task<Forecast> GetForecast(string cityKey, string numOfDays)
         {
-            string uri = base_url + "/" + string.Format(day_of_daily_forecast_endpoint, cityKey, api_key, language);
+            string uri = base_url + "/" + string.Format(day_of_daily_forecast_endpoint, numOfDays, cityKey, api_key, language);
             System.Diagnostics.Debug.WriteLine("uri: "+uri);
             Trace.WriteLine("uri: "+uri);
             using (HttpClient client = new HttpClient())
             {
                 var response = await client.GetAsync(uri);
                 string json = await response.Content.ReadAsStringAsync();
-                System.Diagnostics.Debug.WriteLine("json: "+json);
-                Trace.WriteLine("json: "+json);
                 Forecast forecast = JsonConvert.DeserializeObject<Forecast>(json);
                 return forecast;
             }
