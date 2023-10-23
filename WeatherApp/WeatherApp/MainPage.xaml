@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:WeatherApp.Client.ViewModels"
+             x:Class="WeatherApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <StackLayout>
+                <Label HorizontalTextAlignment="Center" Text="City:" ></Label>
+                <Entry x:Name="txtCity"></Entry>
+                <Button x:Name="btnSearch" Text="Search"  Command="{Binding LoadCitiesCommand}" CommandParameter="{Binding Source={x:Reference txtCity}, Path=Text}" ></Button>
+                <Picker x:Name="lbData" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity}" ></Picker>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Temperature for city:"></Label>
+                <Label x:Name="lblCityName" HorizontalTextAlignment="Center" Text="{Binding SelectedCity.LocalizedName}" ></Label>
+                <Label  HorizontalTextAlignment="Center" Text="is:"></Label>
+                <Label x:Name="lblTemperatureValue" HorizontalTextAlignment="Center" Text="{Binding WeatherView.CurrentTemperature}" ></Label>
+                <Label  HorizontalTextAlignment="Center" Text="real feel temperature:"></Label>
+                <Label x:Name="lblRealFeelTemperature" HorizontalTextAlignment="Center" Text="{Binding Forecast.ForecastRealFeelTemperature}" ></Label>
+                                <Label  HorizontalTextAlignment="Center" Text="city english name:"></Label>
+                <Label x:Name="lblEnglishName" HorizontalTextAlignment="Center" Text="{Binding CityInfo.EnglishName}" ></Label>
+                <Label  HorizontalTextAlignment="Center" Text="City by IP:"></Label>
+                <Label x:Name="lbCityByIP" HorizontalTextAlignment="Center" Text="{Binding CityByIP.LocalizedName}" ></Label>
+                <Label  HorizontalTextAlignment="Center" Text="Top city worldwide:"></Label>
+                <Label x:Name="lbTopCity" HorizontalTextAlignment="Center" Text="{Binding TopCityWorldwide.LocalizedName}" ></Label>
+                <Label  HorizontalTextAlignment="Center" Text="Neighbour city:"></Label>
+                <Label x:Name="lbNeighbourCity" HorizontalTextAlignment="Center" Text="{Binding NeighbourCityView.LocalizedName}" ></Label>
+
+                <Button x:Name="btnIP" Text="city by ip"  Command="{Binding LoadIPCommand}"></Button>
+                <Button x:Name="btnTop" Text="city top"  Command="{Binding LoadTopCommand}"></Button>
+
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
