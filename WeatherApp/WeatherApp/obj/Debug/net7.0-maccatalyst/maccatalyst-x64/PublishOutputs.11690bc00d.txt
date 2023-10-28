@@ -2,8 +2,14 @@
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/CommunityToolkit.Mvvm.dll
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.dll
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Binder.dll
+/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Json.dll
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.DependencyInjection.dll
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.FileSystemGlobbing.dll
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Logging.dll
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/bin/Debug/net7.0-maccatalyst/maccatalyst-x64/publish/../WeatherApp.app/Contents/MonoBundle/Microsoft.Extensions.Logging.Debug.dll

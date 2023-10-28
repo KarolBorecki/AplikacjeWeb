@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{984A6214-27A0-4510-A3D9-E4EFE989EA5F}|http">
+  <MonoDevelop.Ide.ItemProperties.BookshelfAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BookshelfAPI/Properties/launchSettings.json">
+    <Files>
+      <File FileName="BookshelfAPI/Models/Book.cs" />
+      <File FileName="BookshelfAPI/Models/Author.cs" />
+      <File FileName="BookshelfAPI/Program.cs" />
+      <File FileName="BookshelfAPI/Controllers/BookshelfController.cs" Line="112" Column="6" />
+      <File FileName="BookshelfAPI/Services/ServiceResponse.cs" />
+      <File FileName="BookshelfAPI/Validators/BookValidator.cs" />
+      <File FileName="BookshelfAPI/Validators/IValidator.cs" />
+      <File FileName="BookshelfAPI/Validators/AuthorValidator.cs" />
+      <File FileName="BookshelfAPI/Services/BookshelfService.cs" />
+      <File FileName="BookshelfAPI/appsettings.json" />
+      <File FileName="BookshelfAPI/appsettings.Development.json" />
+      <File FileName="BookshelfAPI/Properties/launchSettings.json" Line="34" Column="48" />
+      <File FileName="BookshelfAPI/Services/IBookshelfService.cs" Line="1" Column="1" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BookshelfAPI">
+            <Node name="BookshelfAPI">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

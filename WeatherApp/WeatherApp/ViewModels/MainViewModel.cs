@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using WeatherApp.Client.Models;
+using WeatherApp.Client.Models.Bookshelf;
 using WeatherApp.Client.Services;
 
 namespace WeatherApp.Client.ViewModels
@@ -18,19 +19,17 @@ namespace WeatherApp.Client.ViewModels
         private Weather _weather;
         private Forecast _forecast;
         private readonly IAccuWeatherService _accuWeatherService;
+        private readonly IBookshelfService _bookshelfService;
 
-        public MainViewModel()
+        public MainViewModel(IAccuWeatherService accuWeatherService, IBookshelfService bookshelfService)
         {
-            _accuWeatherService = new AccuWeatherService();
+            //_accuWeatherService = Application.Current.Handler.MauiContext.Services.GetService<AccuWeatherService>();
+            _accuWeatherService = accuWeatherService;
+            _bookshelfService = bookshelfService;
+            Console.WriteLine("Main Vieww");
+            Console.WriteLine("Loaded accu weather service lang: " + _accuWeatherService.GetLang());
             Cities = new ObservableCollection<CityViewModel>();
-
-            //_weather = new Weather();
-            //Temperature t = new Temperature();
-            //Metric m = new Metric();
-            //m.Value = 69;
-            //t.Metric = m;
-            //_weather.Temperature = t;
-            //weatherView = new WeatherViewModel(_weather);
+            GotBooks = new ObservableCollection<BookViewModel>();
         }
 
         // Wheather / Neighbour city
@@ -186,7 +185,7 @@ namespace WeatherApp.Client.ViewModels
                 _forecast = await _accuWeatherService.GetForecast(SelectedCity.Key, "1");
                 Console.WriteLine();
                 Forecast = new ForecastViewModel(_forecast);
-                Console.WriteLine("firecadt: " + Forecast.ForecastRealFeelTemperature);
+                Console.WriteLine("firecast: " + Forecast.ForecastRealFeelTemperature);
             }
         }
 
@@ -196,6 +195,7 @@ namespace WeatherApp.Client.ViewModels
         [RelayCommand]
         public async void LoadCities(string locationName)
         {
+            Console.WriteLine("Clicked SEARCH");
             var cities = await _accuWeatherService.GetLocations(locationName);
             Cities.Clear();
             foreach (var city in cities)
@@ -205,13 +205,87 @@ namespace WeatherApp.Client.ViewModels
         [RelayCommand]
         public async void LoadIP()
         {
+            Console.WriteLine("Clicked IP");
             LoadCityByIPAddress();
         }
 
         [RelayCommand]
         public async void LoadTop()
         {
+            Console.WriteLine("Clicked TOP");
             LoadTopCityWorldwide();
+        }
+
+        // Bookshelf
+
+        // Author data
+        public ObservableCollection<BookViewModel> GotBooks { get; set; }
+        private AuthorViewModel _authorViewModel;
+        public AuthorViewModel GotAuthor
+        {
+            get => _authorViewModel;
+            set
+            {
+                _authorViewModel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private async void LoadBooksFromAPI(long id)
+        {
+            GotBooks.Clear();
+            var books = await _bookshelfService.GetBooks(id);
+            Console.WriteLine("Getting books...");
+            Console.WriteLine("Got book: " + books[0].name);
+            foreach (var book in books)
+            {
+                GotBooks.Add(new BookViewModel(book));
+                Console.WriteLine("Got book: " + book.name);
+            }
+                
+        }
+
+        private async void LoadAuthorFromAPI(long id)
+        {
+            var author = await _bookshelfService.GetAuthor(id);
+            GotAuthor = new AuthorViewModel(author);
+        }
+
+        [RelayCommand]
+        public async void LoadAuthorData(string id)
+        {
+            Console.WriteLine("Clicked Load Author data");
+            long convertedId = Int64.Parse(id);
+            LoadAuthorFromAPI(convertedId);
+            LoadBooksFromAPI(convertedId);
+        }
+
+        // PUT author
+        private async void PutAuthorToAPI(Author author)
+        {
+            var response = await _bookshelfService.PutAuthor(author);
+            Console.WriteLine(response);
+        }
+
+        [RelayCommand]
+        public async void PutAuthorData(Author author)
+        {
+            Console.WriteLine("Clicked Put Author data");
+            PutAuthorToAPI(author);
+        }
+
+        // PUT book
+        private async void PutBookToAPI(Book book)
+        {
+            var response = await _bookshelfService.PutBook(book);
+            Console.WriteLine(response);
+        }
+
+        [RelayCommand]
+        public async void PutBookData(Book book)
+        {
+            Console.WriteLine("Clicked Put Book data");
+            PutBookToAPI(book);
         }
     }
 }

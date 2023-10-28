@@ -11,5 +11,6 @@ namespace WeatherApp.Client.Services
         Task<City> GetCityByIPAddress(string ip);
         Task<Weather> GetCurrentConditions(string cityKey);
         Task<Forecast> GetForecast(string cityKey, string numOfDays);
+        String GetLang();
     }
 }

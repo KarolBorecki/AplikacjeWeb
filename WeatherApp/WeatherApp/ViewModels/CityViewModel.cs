@@ -12,5 +12,10 @@ namespace WeatherApp.Client.ViewModels
             LocalizedName = city.LocalizedName; 
             Key = city.Key;
         }
+
+        public override String ToString()
+        {
+            return LocalizedName;
+        }
     }
 }

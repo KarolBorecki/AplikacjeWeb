@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		0xNYK0fhPaJCEarvOgwvwAMXntY=
+		PUcQhk5P4dNrs47LItSQj1LcMlE=
 		</data>
 		<key>Resources/MauiInfo.plist</key>
 		<data>
@@ -34,7 +34,11 @@
 		</data>
 		<key>Resources/appsetings.json</key>
 		<data>
-		sxUVjKQS1whouuIwTKHagirVp+Q=
+		Su242hMdf5jgiCyq/+iemiPyUq4=
+		</data>
+		<key>Resources/appsettings.json</key>
+		<data>
+		Su242hMdf5jgiCyq/+iemiPyUq4=
 		</data>
 		<key>Resources/dotnet_bot.png</key>
 		<data>
@@ -72,6 +76,27 @@
 			CnS3b9EMFQmETBUVEgtcron4DBsfFdcVt3zfCP6Uflg=
 			</data>
 		</dict>
+		<key>MonoBundle/Microsoft.Extensions.Configuration.Binder.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7GY9+7Cm0Z8DJ+JCFwgCx9OfFtUvXlFHaaLlBYmXfIE=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.Configuration.FileExtensions.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S86mGNxJnkVJ/qolp6cBN7xwXQ/YVtHy7QTaPO93AIA=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.Configuration.Json.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k525Vc8hbMpPjxYUYZNPuzJIuy+E1Is2XRTMFbUm1pE=
+			</data>
+		</dict>
 		<key>MonoBundle/Microsoft.Extensions.Configuration.dll</key>
 		<dict>
 			<key>hash2</key>
@@ -91,6 +116,27 @@
 			<key>hash2</key>
 			<data>
 			/+vk9BsQP4bCVt1Y6aXakSztSMAli200ER6untxHLBg=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.FileProviders.Abstractions.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Zt6OY6gg/1Tzt9oFOQBkezPvUVkFK4dyM6Pfk+MTUvg=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.FileProviders.Physical.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9xkIbIienaRj9Td2MyWYzL9JmVx6CKbGCPrvJ1Pxfn8=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.FileSystemGlobbing.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Gm0yiS5fySh2nZXdCRKZIbASK8sSukwjogLc+a9EBZY=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.Extensions.Logging.Abstractions.dll</key>
@@ -1336,14 +1382,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RVIXj5WfzNP0+pdhtgQRZ2+3Znke0fIOsEuDezQXe/g=
+			nhz+CHT+vYFIYER3HPJUf5iXCy1Ttu12h8MnsyTMOEg=
 			</data>
 		</dict>
 		<key>MonoBundle/WeatherApp.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7fSZ92H1tOF5L9C2R3T9rFvC+uIgkJLzopj9uaEYRFs=
+			c8rn/veD2T2rp+IS275rx1/L40brSviSX8dGTbqyUGk=
 			</data>
 		</dict>
 		<key>MonoBundle/WindowsBase.dll</key>
@@ -1434,7 +1480,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TyZjRAyVo8eZbJqJOHkYKjaYIzwM+Z0dES5qPDGfou8=
+			fr1k15NcmYrCBLq6WSYKvonwluJ+w1+3WiGGTq2VjvM=
 			</data>
 		</dict>
 		<key>Resources/MauiInfo.plist</key>
@@ -1476,7 +1522,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SqpjKw4XJinWBre7ZKpA9aSKHHAcMFgk2AiK3fv6JdY=
+			4leSye8TykqC9bqs8mAHu7sDYdSQ2Pufs4rGZKmbN50=
+			</data>
+		</dict>
+		<key>Resources/appsettings.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4leSye8TykqC9bqs8mAHu7sDYdSQ2Pufs4rGZKmbN50=
 			</data>
 		</dict>
 		<key>Resources/dotnet_bot.png</key>

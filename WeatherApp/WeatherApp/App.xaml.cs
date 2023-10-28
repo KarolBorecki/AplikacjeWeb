@@ -1,33 +1,28 @@
 ﻿using WeatherApp.Client.ViewModels;
 using WeatherApp.Client.Services;
+using Microsoft.Extensions.Configuration;
+using WeatherApp;
 
 namespace WeatherApp;
 
 public partial class App : Application
 {
     IServiceProvider _serviceProvider;
+    IConfiguration _config;
 
-    public App()
+    public App(MainPage page, IConfiguration config)
     {
-        var serviceCollection = new ServiceCollection();
-        ConfigureServices(serviceCollection);
-        _serviceProvider = serviceCollection.BuildServiceProvider();
+        MainPage = page;
+        _config = config;
+        AppSettings _settings = config.GetRequiredSection("AppSettings").Get<AppSettings>();
+        Console.WriteLine("Config (App):");
+        Console.WriteLine("lang: " + _settings.default_language);
+        Console.WriteLine("api_key: " + _settings.accu_weather.api_key);
     }
 
-    private void ConfigureServices(IServiceCollection services)
-    {
-        services.AddSingleton<IAccuWeatherService, AccuWeatherService>();
-        services.AddSingleton<MainViewModel>();
-        services.AddTransient<MainPage>();
-    }
 
     protected override Window CreateWindow(IActivationState activationState)
     {
-        if (this.MainPage == null)
-        {
-            this.MainPage = new MainPage();
-        }
-
         return base.CreateWindow(activationState);
     }
 }
