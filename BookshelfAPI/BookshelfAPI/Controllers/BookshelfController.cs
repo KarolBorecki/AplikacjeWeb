@@ -82,12 +82,12 @@ public class BokshelfController : ControllerBase
     }
 
     [HttpPost("putbook")]
-    public ActionResult<ServiceResponse<string>> PutBook([FromBody] Book book)
+    public async Task<ActionResult<ServiceResponse<string>>> PutBook([FromBody] Book book)
     {
         if(!_bookValidator.validate(book))
             return StatusCode(400, $"Wrong data provided");
 
-        var result = _bookshelfService.PutBook(book);
+        var result = await _bookshelfService.PutBook(book);
         if (result.Success)
             return Ok(result);
         else
@@ -95,12 +95,12 @@ public class BokshelfController : ControllerBase
     }
 
     [HttpPost("putAuthor")]
-    public ActionResult<ServiceResponse<string>> PutAuthor([FromBody] Author author)
+    public async Task<ActionResult<ServiceResponse<string>>> PutAuthor([FromBody] Author author)
     {
         if (!_authorValidator.validate(author))
             return StatusCode(400, $"Wrong data provided");
 
-        var result = _bookshelfService.PutAuthor(author);
+        var result = await _bookshelfService.PutAuthor(author);
         if (result.Success)
             return Ok(result);
         else

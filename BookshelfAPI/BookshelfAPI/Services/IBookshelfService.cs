@@ -9,7 +9,7 @@ namespace BookshelfAPI.Services
         ServiceResponse<Book> GetBook(long id);
         ServiceResponse<Book> GetBook(string name);
 
-        ServiceResponse<string> PutBook(Book book);
+        Task<ServiceResponse<string>> PutBook(Book book);
 
         ServiceResponse<string> DeleteBook(long id);
 
@@ -17,7 +17,7 @@ namespace BookshelfAPI.Services
         ServiceResponse<Author> GetAuthor(string bookName);
         ServiceResponse<Author> GetAuthor(long id);
 
-        ServiceResponse<string> PutAuthor(Author author);
+        Task<ServiceResponse<string>> PutAuthor(Author author);
     }
 }
 

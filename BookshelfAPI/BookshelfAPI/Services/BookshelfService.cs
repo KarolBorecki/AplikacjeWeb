@@ -5,22 +5,21 @@ namespace BookshelfAPI.Services
 {
 	public class BookshelfService : IBookshelfService
     {
-        private List<Book> _books;
-        private List<Author> _authors;
+        private readonly DataContext _dataContext;
 
-        public BookshelfService()
+        public BookshelfService(DataContext context)
         {
-            _books = new List<Book>();
-            _authors = new List<Author>();
+            _dataContext = context;
         }
 
         public ServiceResponse<List<Book>> GetBooks()
         {
+            var books = _dataContext.books.ToArray();
             try
             {
                 var response = new ServiceResponse<List<Book>>()
                 {
-                    Data = _books,
+                    Data = books.ToList(),
                     Message = "Ok",
                     Success = true
                 };
@@ -42,12 +41,13 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                if (!_books.Any(book => book.authorId == authorId))
+                var books = _dataContext.books;
+                if (!books.Any(book => book.authorId == authorId))
                     throw new Exception("Could not find any books with given author ID!");
-                var books = _books.Where(book => book.authorId == authorId).ToList();
+                var gotBooks = books.Where(book => book.authorId == authorId).ToList();
                 var response = new ServiceResponse<List<Book>>()
                 {
-                    Data = books,
+                    Data = gotBooks,
                     Message = "Ok",
                     Success = true
                 };
@@ -69,9 +69,10 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                if (!_books.Any(book => book.id == id))
+                var books = _dataContext.books;
+                if (!books.Any(book => book.id == id))
                     throw new Exception("Could not find any book with given ID!");
-                var book = _books.Where(book => book.id == id).First();
+                var book = books.Where(book => book.id == id).First();
                 var response = new ServiceResponse<Book>()
                 {
                     Data = book,
@@ -96,9 +97,10 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                if (_books.Any(book => book.name == name))
+                var books = _dataContext.books;
+                if (books.Any(book => book.name == name))
                     throw new Exception("Could not find any book with given name!");
-                var book = _books.Where(book => book.name == name).First();
+                var book = books.Where(book => book.name == name).First();
                 var response = new ServiceResponse<Book>()
                 {
                     Data = book,
@@ -119,14 +121,17 @@ namespace BookshelfAPI.Services
             }
         }
 
-        public ServiceResponse<string> PutBook(Book book)
+        public async Task<ServiceResponse<string>> PutBook(Book book)
         {
             try
             {
-                if (_books.Any(b => b.id == book.id))
+                var books = _dataContext.books;
+                if (books.Any(b => b.id == book.id))
                     throw new Exception("Book with given ID already exists!");
 
-                _books.Add(book);
+                _dataContext.books.Add(book);
+                await _dataContext.SaveChangesAsync();
+
                 var response = new ServiceResponse<string>()
                 {
                     Data = "Book added",
@@ -147,14 +152,14 @@ namespace BookshelfAPI.Services
             }
         }
 
-        public ServiceResponse<string> DeleteBook(long id)
+        public ServiceResponse<string> DeleteBook(long bookId)
         {
             try
             {
-                if (!_books.Any(b => b.id == id))
-                    throw new Exception("Book with given ID does not exists!");
-                var book = _books.Where(b => b.id == id).First();
-                _books.Remove(book);
+                var book = new Book() { id = bookId };
+                _dataContext.books.Attach(book);
+                _dataContext.books.Remove(book);
+
                 var response = new ServiceResponse<string>()
                 {
                     Data = "Book deleted",
@@ -179,9 +184,10 @@ namespace BookshelfAPI.Services
         {
             try
             {
+                var authors = _dataContext.authors;
                 var response = new ServiceResponse<List<Author>>()
                 {
-                    Data = _authors,
+                    Data = authors.ToList(),
                     Message = "Ok",
                     Success = true
                 };
@@ -203,13 +209,15 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                if (!_books.Any(b => b.name == bookName))
+                var books = _dataContext.books;
+                if (!books.Any(b => b.name == bookName))
                     throw new Exception("Could not find book with given name!");
-                var book = _books.Where(b => b.name == bookName).First();
+                var book = books.Where(b => b.name == bookName).First();
 
-                if (!_authors.Any(a => a.id == book.authorId))
+                var authors = _dataContext.authors;
+                if (!authors.Any(a => a.id == book.authorId))
                     throw new Exception("Could not find the book's author!");
-                var author = _authors.Where(a => a.id == book.authorId).First();
+                var author = authors.Where(a => a.id == book.authorId).First();
                 var response = new ServiceResponse<Author>()
                 {
                     Data = author,
@@ -234,9 +242,10 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                if (!_authors.Any(a => a.id == id))
+                var authors = _dataContext.authors;
+                if (!authors.Any(a => a.id == id))
                     throw new Exception("Could not find author with given ID!");
-                var author = _authors.Where(a => a.id == id).First();
+                var author = authors.Where(a => a.id == id).First();
                 var response = new ServiceResponse<Author>()
                 {
                     Data = author,
@@ -257,14 +266,16 @@ namespace BookshelfAPI.Services
             }
         }
 
-        public ServiceResponse<string> PutAuthor(Author author)
+        public async Task<ServiceResponse<string>> PutAuthor(Author author)
         {
             try
             {
-                if (_authors.Any(a => a.id == author.id))
+                var authors = _dataContext.authors;
+                if (authors.Any(a => a.id == author.id))
                     throw new Exception("Author with given ID already exists!");
 
-                _authors.Add(author);
+                authors.Add(author);
+                await _dataContext.SaveChangesAsync();
                 var response = new ServiceResponse<string>()
                 {
                     Data = "Author added",

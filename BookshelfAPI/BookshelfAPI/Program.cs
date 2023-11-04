@@ -1,4 +1,5 @@
-﻿using BookshelfAPI.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using BookshelfAPI.Services;
 using BookshelfAPI.Models;
 using BookshelfAPI.Validators;
 
@@ -11,7 +12,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IBookshelfService, BookshelfService>();
+//Microsoft.EntityFrameworkCore.SqlServer
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IBookshelfService, BookshelfService>();
 
 builder.Services.AddScoped<IValidator<Book>, BookValidator>();
 builder.Services.AddScoped<IValidator<Author>, AuthorValidator>();
