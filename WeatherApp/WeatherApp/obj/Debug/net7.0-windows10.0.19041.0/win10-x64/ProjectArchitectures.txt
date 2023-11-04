@@ -1,0 +1,1 @@
+C:\Users\karol\Desktop\AplikacjeWeb\WeatherApp\WeatherApp\WeatherApp.csproj;x64

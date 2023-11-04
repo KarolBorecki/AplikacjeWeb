@@ -236,19 +236,23 @@ namespace WeatherApp.Client.ViewModels
             GotBooks.Clear();
             var books = await _bookshelfService.GetBooks(id);
             Console.WriteLine("Getting books...");
-            Console.WriteLine("Got book: " + books[0].name);
-            foreach (var book in books)
-            {
-                GotBooks.Add(new BookViewModel(book));
-                Console.WriteLine("Got book: " + book.name);
-            }
+            if(books != null)
+                foreach (var book in books)
+                {
+                    GotBooks.Add(new BookViewModel(book));
+                    Console.WriteLine("Got book: " + book.name);
+                }
+
                 
         }
 
         private async void LoadAuthorFromAPI(long id)
         {
             var author = await _bookshelfService.GetAuthor(id);
-            GotAuthor = new AuthorViewModel(author);
+            if(author != null)
+                GotAuthor = new AuthorViewModel(author);
+            else
+                GotAuthor = null;
         }
 
         [RelayCommand]

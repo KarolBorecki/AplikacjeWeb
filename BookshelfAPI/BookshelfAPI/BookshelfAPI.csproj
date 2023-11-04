@@ -26,6 +26,7 @@
     <None Remove="Validators\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Migrations\" />
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="Validators\" />

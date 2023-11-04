@@ -12,34 +12,34 @@ build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = WeatherApp
-build_property.ProjectDir = /Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/
+build_property.ProjectDir = C:\Users\karol\Desktop\AplikacjeWeb\WeatherApp\WeatherApp\
 
-[/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/App.xaml]
+[C:/Users/karol/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/AppShell.xaml]
+[C:/Users/karol/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/MainPage.xaml]
+[C:/Users/karol/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/Resources/Styles/Colors.xaml]
+[C:/Users/karol/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[/Users/karolborecki/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/Resources/Styles/Styles.xaml]
+[C:/Users/karol/Desktop/AplikacjeWeb/WeatherApp/WeatherApp/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = WeatherApp.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

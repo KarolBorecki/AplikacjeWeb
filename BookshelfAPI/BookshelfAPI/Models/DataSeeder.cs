@@ -38,7 +38,7 @@ namespace BookshelfAPI.Models
                 .RuleFor(x => x.name, x => x.Name.FullName())
                 .RuleFor(x => x.id, x => nextId++);
 
-            return productFaker.Generate(booksCount).ToList();
+            return productFaker.Generate(authorsCount).ToList();
 
         }
     }
