@@ -21,6 +21,7 @@ namespace BookshelfAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+    
             modelBuilder.Entity<Book>()
                 .Property(p => p.authorId)
                 .IsRequired()
@@ -36,10 +37,11 @@ namespace BookshelfAPI.Models
              .IsRequired()
              .HasMaxLength(150);
 
-            var dataSeeder = new DataSeeder(200, 30, 167824);
+            var dataSeeder = new DataSeeder(30, 200, 167824);
 
             modelBuilder.Entity<Book>().HasData(dataSeeder.GenerateBooksData());
             modelBuilder.Entity<Author>().HasData(dataSeeder.GenerateAuthorData());
+
         }
 
     }

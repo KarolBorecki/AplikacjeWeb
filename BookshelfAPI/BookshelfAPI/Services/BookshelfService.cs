@@ -1,5 +1,6 @@
 ﻿using System;
 using BookshelfAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookshelfAPI.Services 
 {
@@ -125,11 +126,8 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                var books = _dataContext.books;
-                if (books.Any(b => b.id == book.id))
-                    throw new Exception("Book with given ID already exists!");
-
-                _dataContext.books.Add(book);
+                var addedBook = new Book { authorId =  book.authorId, name = book.name, publishDate = book.publishDate };
+                _dataContext.books.Add(addedBook);
                 await _dataContext.SaveChangesAsync();
 
                 var response = new ServiceResponse<string>()
@@ -270,11 +268,8 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                var authors = _dataContext.authors;
-                if (authors.Any(a => a.id == author.id))
-                    throw new Exception("Author with given ID already exists!");
-
-                authors.Add(author);
+                var addedAuthor = new Author { name = author.name };
+                _dataContext.authors.Add(addedAuthor);
                 await _dataContext.SaveChangesAsync();
                 var response = new ServiceResponse<string>()
                 {
