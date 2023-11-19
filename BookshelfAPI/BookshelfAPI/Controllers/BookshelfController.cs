@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using System.Web.Http.Cors;
+
 using BookshelfAPI.Models;
 using BookshelfAPI.Services;
 using BookshelfAPI.Validators;
@@ -8,6 +10,7 @@ namespace BookshelfAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[EnableCors(origins:"https://localhost:7035", headers: "*", methods: "*")]
 public class BokshelfController : ControllerBase
 {
     private readonly IBookshelfService _bookshelfService;

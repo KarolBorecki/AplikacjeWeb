@@ -152,3 +152,9 @@ C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\obj\Debug\net7.0\r
 C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\obj\Debug\net7.0\BookshelfAPI.pdb
 C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\obj\Debug\net7.0\BookshelfAPI.genruntimeconfig.cache
 C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\obj\Debug\net7.0\ref\BookshelfAPI.dll
+C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\bin\Debug\net7.0\System.Web.Cors.dll
+C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\bin\Debug\net7.0\System.Web.Http.dll
+C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\bin\Debug\net7.0\System.Web.Http.Cors.dll
+C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\karol\Desktop\AplikacjeWeb\BookshelfAPI\BookshelfAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

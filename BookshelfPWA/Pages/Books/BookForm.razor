@@ -1,0 +1,31 @@
+﻿@using BookshelfAPI.Models;
+<EditForm Model="book" OnValidSubmit="OnValidSubmit">
+    <div class="form-group">
+        <label for="price">Id:</label>
+        <InputNumber id="id" @bind-Value="book.id" class="form-control"></InputNumber>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <InputText id="name" @bind-Value="book.name" class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="releaseDate">Release Date:</label>
+        <InputDate id="publishDate" @bind-Value="book.publishDate" class="form-control"></InputDate>
+    </div>
+    <div class="form-group">
+        <label for="price">authorId:</label>
+        <InputNumber id="authorId" @bind-Value="book.authorId" class="form-control"></InputNumber>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</EditForm>
+
+
+@code {
+    [Parameter]
+    public Book book { get; set; }
+
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+
+}

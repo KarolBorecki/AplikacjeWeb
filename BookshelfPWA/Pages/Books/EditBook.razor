@@ -1,0 +1,50 @@
+﻿@page "/books/edit/{Id:long}"
+
+@using BookshelfAPI.Models;
+@using WeatherApp.Client.Services;
+@inject IBookshelfService BookshelfService
+@inject NavigationManager NavigationManager
+
+<h3>Edit Book</h3>
+
+@if (book == null)
+{
+    <p><em>@message</em></p>
+}
+else
+{
+    <BookForm book="book" OnValidSubmit="HandleValidSubmit"></BookForm>
+    <button class="btn btn-danger" @onclick=HandleDelete>Delete</button>
+}
+
+
+
+@code {
+    [Parameter]
+    public long Id { get; set; }
+
+    private Book book;
+    private string message = "Loading book...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await BookshelfService.GetBook(Id);
+        if (response != null)
+            book = response;
+        else
+            message = "Could not load book.";
+    }
+
+    async Task HandleValidSubmit()
+    {
+        await BookshelfService.DeleteBook(Id);
+        var response = await BookshelfService.PutBook(book);
+        NavigationManager.NavigateTo("/books");
+    }
+
+    async Task HandleDelete()
+    {
+        var response = await BookshelfService.DeleteBook(Id);
+        NavigationManager.NavigateTo("/books");
+    }
+}

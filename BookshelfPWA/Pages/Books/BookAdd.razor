@@ -1,0 +1,22 @@
+﻿@page "/books/add"
+
+@using BookshelfAPI.Models;
+@using WeatherApp.Client.Services;
+@inject IBookshelfService BookshelfService
+@inject NavigationManager NavigationManager
+
+<h3>Add Book</h3>
+
+<BookForm book="book" OnValidSubmit="HandleValidSubmit"></BookForm>
+
+@code {
+    private Book book = new Book();
+
+    async Task HandleValidSubmit()
+    {
+        var response = await BookshelfService.PutBook(book);
+        NavigationManager.NavigateTo("/books");
+    }
+
+
+}

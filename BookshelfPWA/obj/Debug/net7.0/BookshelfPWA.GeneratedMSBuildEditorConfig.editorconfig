@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BookshelfPWA
+build_property.RootNamespace = BookshelfPWA
+build_property.ProjectDir = C:\Users\karol\Desktop\AplikacjeWeb\BookshelfPWA\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\karol\Desktop\AplikacjeWeb\BookshelfPWA
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Pages/Books/BookAdd.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQm9va0FkZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Pages/Books/BookForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQm9va0Zvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Pages/Books/EditBook.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRWRpdEJvb2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Pages/Books/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9tu3engqyl
+
+[C:/Users/karol/Desktop/AplikacjeWeb/BookshelfPWA/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hfatft4kvp

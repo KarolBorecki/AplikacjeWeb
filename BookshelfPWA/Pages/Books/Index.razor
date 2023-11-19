@@ -1,0 +1,75 @@
+﻿@page "/books"
+@using BookshelfAPI.Models;
+@using WeatherApp.Client.Services;
+
+@inject IBookshelfService BookshelfsService
+@inject NavigationManager NavigationManager
+
+<h2>Bookshelf</h2>
+
+@if (books == null)
+{
+    <p><em>@message</em></p>
+} else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID książki</th>
+                <th>Nazwa książki</th>
+                <th>Data wydania</th>
+                <th>ID autora</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in books)
+            {
+                <tr>
+                    <td>@book.id</td>
+                    <td>@book.name</td>
+                    <td>@book.publishDate</td>
+                    <td>@book.authorId</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="@(() => EditBook(book.id))">Edit</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+<button class="btn btn-success" onclick="@AddBook">Add Book</button>
+
+@code {
+    private Book[] books;
+    private string message = "Loading books...";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadBooks();
+    }
+
+    private async Task LoadBooks()
+    {
+        var response = await BookshelfsService.GetBooks();
+        if (response != null)
+        {
+            books = response;
+
+        }
+        else
+        {
+            message = "Could not load books.";
+        }
+    }
+
+    private void EditBook(long bookId)
+    {
+        NavigationManager.NavigateTo($"/books/edit/{bookId}");
+    }
+
+    private void AddBook()
+    {
+        NavigationManager.NavigateTo($"/books/add");
+    }
+}

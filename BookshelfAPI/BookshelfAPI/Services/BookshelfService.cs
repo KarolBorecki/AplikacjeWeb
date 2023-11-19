@@ -154,10 +154,10 @@ namespace BookshelfAPI.Services
         {
             try
             {
-                var book = new Book() { id = bookId };
-                _dataContext.books.Attach(book);
-                _dataContext.books.Remove(book);
-
+                var bookToDelete = _dataContext.books.FirstOrDefault(x => x.id == bookId);
+                _dataContext.books.Remove(bookToDelete);
+                _dataContext.SaveChangesAsync().Wait();
+                var deletedBook = _dataContext.books.FirstOrDefault(x => x.id == bookId);
                 var response = new ServiceResponse<string>()
                 {
                     Data = "Book deleted",
