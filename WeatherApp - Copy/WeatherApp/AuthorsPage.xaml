@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:WeatherApp.Converters"
+             x:Class="WeatherApp.AuthorsPage"
+             Title="AuthorsPage"
+             x:Name="authorsPage">
+    <ContentPage.Resources>
+        <converters:AuthorConverter x:Key="AuthorConverterResource" />
+        <converters:BookConverter x:Key="BookConverterResource" />
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <StackLayout>
+            <Label HorizontalTextAlignment="Center" Text="GetBooksByAuthorId:" FontSize="22"/>
+            <Label Text="Books:" />
+            <ListView ItemsSource="{Binding GotBooks}" />
+
+            <Label Text="Name:" />
+            <Label Text="{Binding GotAuthor}" />
+            <Entry x:Name="authorId" Placeholder="Author Id"></Entry>
+            <Button x:Name="btnAuthorAndBooks" Text="Get data"  Command="{Binding LoadAuthorDataCommand}"  CommandParameter="{Binding Source={x:Reference authorId}, Path=Text}"></Button>
+
+            <Label HorizontalTextAlignment="Center" Text="PutAuthor:" FontSize="22"/>
+            <Entry x:Name="authorIdPut" Placeholder="Author Id"></Entry>
+            <Entry x:Name="authorNamePut" Placeholder="Author name"></Entry>
+
+            <Button x:Name="btnPutAuthor" Text="Put author data"  Command="{Binding PutAuthorDataCommand}"  >
+                <Button.CommandParameter>
+                    <MultiBinding Converter="{StaticResource AuthorConverterResource}">
+                        <Binding Source="{x:Reference authorIdPut}" Path="Text"/>
+                        <Binding Source="{x:Reference authorNamePut}" Path="Text"/>
+                    </MultiBinding>
+                </Button.CommandParameter>
+            </Button>
+
+            <Button x:Name="btnBack" Text="BACK"  Command="{Binding BackCommand}" ></Button>
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

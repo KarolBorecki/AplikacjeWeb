@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wOaxLTL8ea6yjTVZQN2yvl+Cu1MUvIZUx2Z1WB/YW0UkDKP2ywo8L9i/hN6wn1Y8ufJeyKy3ExNuqf/orFFeDw==",
+  "dgSpecHash": "6t31duAl1VJ7kPLRBTygGtgtbd+LtaCjAnp8I9gJ8xes3ij2g1kvBr2g6v4GF2jkUpZ7bhz1SOjSnncxfmccNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\karol\\Desktop\\AplikacjeWeb\\WeatherApp\\WeatherApp\\WeatherApp.csproj",
   "expectedPackageFiles": [
@@ -123,16 +123,16 @@
     "C:\\Users\\karol\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.7.20.1\\xamarin.kotlin.stdlib.jdk8.1.7.20.1.nupkg.sha512",
     "C:\\Users\\karol\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.6.4.1\\xamarin.kotlinx.coroutines.android.1.6.4.1.nupkg.sha512",
     "C:\\Users\\karol\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.6.4.1\\xamarin.kotlinx.coroutines.core.jvm.1.6.4.1.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-arm\\7.0.13\\microsoft.netcore.app.runtime.mono.android-arm.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-x86\\7.0.13\\microsoft.netcore.app.runtime.mono.android-x86.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-x64\\7.0.13\\microsoft.netcore.app.runtime.mono.android-x64.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-arm64\\7.0.13\\microsoft.netcore.app.runtime.mono.android-arm64.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.iossimulator-x64\\7.0.13\\microsoft.netcore.app.runtime.mono.iossimulator-x64.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.maccatalyst-x64\\7.0.13\\microsoft.netcore.app.runtime.mono.maccatalyst-x64.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.13\\microsoft.aspnetcore.app.runtime.win-x64.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.13\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.13.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.13\\microsoft.netcore.app.runtime.win-x64.7.0.13.nupkg.sha512"
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-arm\\7.0.14\\microsoft.netcore.app.runtime.mono.android-arm.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-x86\\7.0.14\\microsoft.netcore.app.runtime.mono.android-x86.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-x64\\7.0.14\\microsoft.netcore.app.runtime.mono.android-x64.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.android-arm64\\7.0.14\\microsoft.netcore.app.runtime.mono.android-arm64.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.iossimulator-x64\\7.0.14\\microsoft.netcore.app.runtime.mono.iossimulator-x64.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.maccatalyst-x64\\7.0.14\\microsoft.netcore.app.runtime.mono.maccatalyst-x64.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.14\\microsoft.aspnetcore.app.runtime.win-x64.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.14\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.14.nupkg.sha512",
+    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.14\\microsoft.netcore.app.runtime.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

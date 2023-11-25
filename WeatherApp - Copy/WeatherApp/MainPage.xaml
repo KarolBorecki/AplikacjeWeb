@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:WeatherApp.Converters"
+             xmlns:viewmodel="clr-namespace:WeatherApp.Client.ViewModels"
+             x:Class="WeatherApp.MainPage"
+             x:Name="mainPage"
+            >
+
+    <!--<ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>-->
+
+    <ContentPage.Resources>
+        <converters:AuthorConverter x:Key="AuthorConverterResource" />
+        <converters:BookConverter x:Key="BookConverterResource" />
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            MaximumWidthRequest="400"
+            VerticalOptions="Center"
+            Padding="20">
+            <Button x:Name="btnAuthors" Text="Authors"  Command="{Binding GoToAuthorsPageCommand}" ></Button>
+
+            <Button x:Name="btnBooks" Text="Books"  Command="{Binding GoToBooksPageCommand}"></Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

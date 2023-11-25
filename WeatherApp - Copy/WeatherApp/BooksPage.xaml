@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:WeatherApp.Converters"
+             x:Class="WeatherApp.BooksPage"
+             Title="BooksPage"
+             x:Name="booksPage">
+    <ContentPage.Resources>
+        <converters:AuthorConverter x:Key="AuthorConverterResource" />
+        <converters:BookConverter x:Key="BookConverterResource" />
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <StackLayout>
+            <Label Text="{Binding GotBook}" />
+            <Entry x:Name="bookId" Placeholder="Book Id"></Entry>
+            <Button x:Name="btnBookData" Text="Get data"  Command="{Binding LoadBookDataCommand}"  CommandParameter="{Binding Source={x:Reference bookId}, Path=Text}"></Button>
+
+            <Label HorizontalTextAlignment="Center" Text="PutBookData:" FontSize="22"/>
+            <Entry x:Name="bookIdPut" Placeholder="Book Id"></Entry>
+            <Entry x:Name="bookAuthorIdPut" Placeholder="Author Id"></Entry>
+            <Entry x:Name="bookNamePut" Placeholder="Book name"></Entry>
+
+            <Button x:Name="btnPutBook" Text="Put book data"  Command="{Binding PutBookDataCommand}"  >
+                <Button.CommandParameter>
+                    <MultiBinding Converter="{StaticResource BookConverterResource}">
+                        <Binding Source="{x:Reference bookIdPut}" Path="Text"/>
+                        <Binding Source="{x:Reference bookAuthorIdPut}" Path="Text"/>
+                        <Binding Source="{x:Reference bookNamePut}" Path="Text"/>
+                    </MultiBinding>
+                </Button.CommandParameter>
+            </Button>
+            <Label HorizontalTextAlignment="Center" Text="DeleteBook:" FontSize="22"/>
+            <Entry x:Name="bookDeleteId" Placeholder="Book Id"></Entry>
+            <Button x:Name="btndeleteBooks" Text="Delete"  Command="{Binding DeleteBookCommand}"  CommandParameter="{Binding Source={x:Reference bookDeleteId}, Path=Text}"></Button>
+
+            <Button x:Name="btnBack" Text="BACK"  Command="{Binding BackCommand}" ></Button>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

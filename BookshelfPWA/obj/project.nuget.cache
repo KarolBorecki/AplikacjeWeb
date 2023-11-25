@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HMCBbchbkN3JaJTBJIvWiQQS63APY8Nv5rScs67BQrWPvvuwW9amWQ5D+vqqE/eQSlvyi0rbYcXWKgm4aGHtUQ==",
+  "dgSpecHash": "W4HjbQcADFciuWya7h1mo990duWq4o5k//CBCURXqzU8Tb2w4H63g5cwvXeu5SU+Zezj1vdKYE9K3Va9TK6R/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\karol\\Desktop\\AplikacjeWeb\\BookshelfPWA\\BookshelfPWA.csproj",
   "expectedPackageFiles": [
@@ -35,8 +35,7 @@
     "C:\\Users\\karol\\.nuget\\packages\\microsoft.jsinterop.webassembly\\7.0.13\\microsoft.jsinterop.webassembly.7.0.13.nupkg.sha512",
     "C:\\Users\\karol\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\karol\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\karol\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.14\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.14.nupkg.sha512"
+    "C:\\Users\\karol\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

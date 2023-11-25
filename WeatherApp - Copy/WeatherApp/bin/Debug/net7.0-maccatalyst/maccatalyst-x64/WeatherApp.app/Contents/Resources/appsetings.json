@@ -1,0 +1,30 @@
+{
+  "AppSettings": {
+    "default_language": "pl",
+
+    "accu_weather": {
+      "api_key": "6NhMXkYTl41bWdXnFblYD19xzsTcdqjs",
+      "base_url": "http://dataservice.accuweather.com",
+      "autocomplete_endpoint": "locations/v1/cities/autocomplete?apikey={0}&q={1}&language{2}",
+      "current_conditions_endpoint": "currentconditions/v1/{0}?apikey={1}&language{2}",
+      "city_neigh_by_locationkey_endpoint": "locations/v1/cities/neighbors/{0}?apikey={1}&language{2}",
+      "city_top_worldwide_endpoint": "locations/v1/topcities/{0}?apikey={1}&language{2}",
+      "city_info_by_location_key_endpoint": "locations/v1/{0}?apikey={1}&language{2}",
+      "city_by_ip_endpoint": "locations/v1/cities/ipaddress?apikey={0}&q={1}&language{2}",
+      "day_of_daily_forecast_endpoint": "forecasts/v1/daily/{0}day/{1}?apikey={2}&language{3}"
+    },
+
+    "bookshlef": {
+      "base_url": "https://localhost:7269/api",
+
+      "getbooks_enpoint": "getbooks/{0}",
+      "geauthors_enpoint": "getauthors",
+
+      "getbook_endpoint": "getbook/{0}",
+      "getauthor_endpoint": "getauthor/{0}",
+
+      "putbook_endpoint": "putbook",
+      "putAuthor_endpoint": "putAuthor"
+    }
+  }
+}

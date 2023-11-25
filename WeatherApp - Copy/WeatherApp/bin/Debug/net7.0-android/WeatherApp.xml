@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeatherApp</name>
+    </assembly>
+    <members>
+        <member name="T:WeatherApp.Client.ViewModels.AuthorsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.AuthorsViewModel.loadAuthorDataCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.AuthorsViewModel.LoadAuthorDataCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.AuthorsViewModel.LoadAuthorDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.AuthorsViewModel.LoadAuthorData(System.String)"/>.</summary>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.AuthorsViewModel.putAuthorDataCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.AuthorsViewModel.PutAuthorDataCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.AuthorsViewModel.PutAuthorDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.AuthorsViewModel.PutAuthorData(WeatherApp.Client.Models.Bookshelf.Author)"/>.</summary>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.AuthorsViewModel.backCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.AuthorsViewModel.BackCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.AuthorsViewModel.BackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.AuthorsViewModel.Back"/>.</summary>
+        </member>
+        <member name="T:WeatherApp.Client.ViewModels.BooksViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.BooksViewModel.loadBookDataCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.BooksViewModel.LoadBookDataCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.BooksViewModel.LoadBookDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.BooksViewModel.LoadBookData(System.String)"/>.</summary>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.BooksViewModel.putBookDataCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.BooksViewModel.PutBookDataCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.BooksViewModel.PutBookDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.BooksViewModel.PutBookData(WeatherApp.Client.Models.Bookshelf.Book)"/>.</summary>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.BooksViewModel.deleteBookCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.BooksViewModel.DeleteBookCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.BooksViewModel.DeleteBookCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.BooksViewModel.DeleteBook(System.String)"/>.</summary>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.BooksViewModel.backCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.BooksViewModel.BackCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.BooksViewModel.BackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.BooksViewModel.Back"/>.</summary>
+        </member>
+        <member name="T:WeatherApp.Client.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.MainViewModel.goToBooksPageCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.MainViewModel.GoToBooksPageCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.MainViewModel.GoToBooksPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.MainViewModel.GoToBooksPage"/>.</summary>
+        </member>
+        <member name="F:WeatherApp.Client.ViewModels.MainViewModel.goToAuthorsPageCommand">
+            <summary>The backing field for <see cref="P:WeatherApp.Client.ViewModels.MainViewModel.GoToAuthorsPageCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp.Client.ViewModels.MainViewModel.GoToAuthorsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:WeatherApp.Client.ViewModels.MainViewModel.GoToAuthorsPage"/>.</summary>
+        </member>
+    </members>
+</doc>
